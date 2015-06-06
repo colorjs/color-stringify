@@ -1,0 +1,30 @@
+{
+  "name": "color-stringify",
+  "version": "1.0.0",
+  "description": "Build up a css string from a color values",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfcreative/color-stringify"
+  },
+  "keywords": [
+    "color",
+    "stringify"
+  ],
+  "author": "Deema Ywanov <df.creative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/color-stringify/issues"
+  },
+  "homepage": "https://github.com/dfcreative/color-stringify",
+  "dependencies": {
+    "color-name": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
