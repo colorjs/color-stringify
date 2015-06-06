@@ -1,8 +1,8 @@
 var stringify = require('./');
 var assert = require('chai').assert;
 
-describe('color-string tests', function () {
-	it('generators', function () {
+describe('color-stringify', function () {
+	it('color-string tests', function () {
 		assert.equal(stringify([255, 10, 35], 'hex'), "#ff0a23");
 
 		assert.equal(stringify([255, 10, 35]), "rgb(255, 10, 35)");
@@ -25,5 +25,9 @@ describe('color-string tests', function () {
 		assert.equal(stringify([280, 40, 60, 0.3], 'hwb'), "hwb(280, 40%, 60%, 0.3)");
 		assert.equal(stringify([280, 40, 60, 0.3], 'hwb'), "hwb(280, 40%, 60%, 0.3)");
 		assert.equal(stringify([280, 40, 60, 0], 'hwb'), "hwb(280, 40%, 60%, 0)");
+	});
+
+	it('edge cases', function () {
+
 	});
 });
