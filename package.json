@@ -1,7 +1,7 @@
 {
   "name": "color-stringify",
   "version": "1.0.1",
-  "description": "Build up a css string from a color values",
+  "description": "Build up a css string from color values",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "color",
-    "stringify"
+    "stringify",
+    "color-string"
   ],
   "author": "Deema Ywanov <df.creative@gmail.com>",
   "license": "MIT",
