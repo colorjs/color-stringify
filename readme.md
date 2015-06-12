@@ -10,11 +10,7 @@ var stringify = require('color-stringify');
 stringify([120,100,100,.4], 'hsl'); //hsla(120, 100%, 100%, .4)
 ```
 
-## API
-
-```js
-stringify(<values>, <type>?);
-```
+## `stringify(<values>, <type>?);`
 
 `<values>` is an array.
 
