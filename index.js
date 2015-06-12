@@ -44,16 +44,18 @@ function stringify (values, type) {
 		return '(R' + values[0] + ' / G' + values[1] + ' / B' + values[2] + ')';
 	}
 
-	var isPercent;
+	var isPercent, isAlphaSpace;
 
 	//convert rgb to percents
 	if (type === 'percent') {
 		type = 'rgb';
-		values = values.map(function (value) {
+		values = values.map(function (value, i) {
+			if (i === 3) return value;
 			return Math.round(value * 100 / 255);
 		});
 
 		isPercent = true;
+		isAlphaSpace = true;
 	}
 
 	type = type || 'rgb';
@@ -62,7 +64,7 @@ function stringify (values, type) {
 	isPercent = isPercent ? isPercent : type[0] === 'h';
 
 	//detect whether alpha-perfix is needed
-	var isAlphaSpace = /rgb|hs[lv]/i.test(type);
+	isAlphaSpace = isAlphaSpace || /rgb|hs[lv]/i.test(type);
 
 	//normalize space name
 	if (isAlphaSpace && type[type.length - 1] === 'a') {

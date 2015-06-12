@@ -37,6 +37,7 @@ describe('color-stringify', function () {
 		assert.equal(stringify([0, 255, 255], 'adobe2'), '(R0 / G255 / B255)');
 
 		//percent string
-		assert.equal(stringify([10, 30, 25], 'percent'), "rgb(4%, 12%, 10%)")
+		assert.equal(stringify([10, 30, 25], 'percent'), "rgb(4%, 12%, 10%)");
+		assert.equal(stringify([10, 30, 25, 0.3], 'percent'), "rgba(4%, 12%, 10%, 0.3)");
 	});
 });
