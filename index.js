@@ -50,7 +50,7 @@ function stringify (values, type) {
 	if (type === 'percent') {
 		type = 'rgb';
 		values = values.map(function (value) {
-			return value * 100 / 255;
+			return Math.round(value * 100 / 255);
 		});
 
 		isPercent = true;
