@@ -31,6 +31,10 @@ describe('color-stringify', function () {
 
 		//short hex
 		assert.equal(stringify([0, 255, 255], 'hex'), '#0ff');
+
+		//adobe1,2
+		assert.equal(stringify([0, 255, 255], 'adobe1'), 'R:0, G:255, B:255');
+		assert.equal(stringify([0, 255, 255], 'adobe2'), '(R0 / G255 / B255)');
 	});
 
 	it('edge cases', function () {

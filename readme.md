@@ -25,10 +25,10 @@ Supported types:
 * [x] `'hex'` — `#RRGGBB` or `#RGB` if possible.
 * [x] `'keyword'` — `red`, see [the list of supported names](http://npmjs.org/package/color-name).
 * [x] `'percent'` — `rgb(10%, 20%, 30% [,a])`.
-* [ ] `'adobe1'` — `R:0, G:0, B:0`
-* [ ] `'adobe2'` — `(R0 / G0 / B0)`
-* [ ] `'websafe'` —
-* [ ] `'pantone'` —
+* [x] `'adobe1'` — `R:0, G:0, B:0`.
+* [x] `'adobe2'` — `(R0 / G0 / B0)`.
+* [ ] `'websafe'` — [request feature](/issues).
+* [ ] `'pantone'` — [request feature](/issues).
 * [x] Any other type is stringified as `<type>(<a>, <b>, <c>, ...)`.
 
 
