@@ -25,9 +25,15 @@ describe('color-stringify', function () {
 		assert.equal(stringify([280, 40, 60, 0.3], 'hwb'), "hwb(280, 40%, 60%, 0.3)");
 		assert.equal(stringify([280, 40, 60, 0.3], 'hwb'), "hwb(280, 40%, 60%, 0.3)");
 		assert.equal(stringify([280, 40, 60, 0], 'hwb'), "hwb(280, 40%, 60%, 0)");
+
+		assert.equal(stringify([255, 255, 0], 'keyword'), "yellow");
+		assert.equal(stringify([100, 255, 0], 'keyword'), undefined);
+
+		//short hex
+		assert.equal(stringify([0, 255, 255], 'hex'), '#0ff');
 	});
 
 	it('edge cases', function () {
-
+		//TODO: add adobe1, adobe2 types
 	});
 });
