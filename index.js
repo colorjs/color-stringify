@@ -25,8 +25,8 @@ function stringify (values, type) {
 	// Accept object from `color-parse`
 	if (!Array.isArray(values) && values.values) {
 		var color = values
-		if (values.alpha === 1 || color.alpha === undefined) {
-			return stringify(values.values, type || values.space)
+		if (color.alpha === 1 || color.alpha === undefined) {
+			return stringify(color.values, type || color.space)
 		} else {
 			var values = color.values.slice()
 			values.push(color.alpha)
