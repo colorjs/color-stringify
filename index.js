@@ -22,6 +22,18 @@ for (var name in names) {
  * @param {string} type A color space to stringify values to. By default - rgb.
  */
 function stringify (values, type) {
+	// Accept object from `color-parse`
+	if (!Array.isArray(values) && values.values) {
+		var color = values
+		if (values.alpha === 1 || color.alpha === undefined) {
+			return stringify(values.values, type || values.space)
+		} else {
+			var values = color.values.slice()
+			values.push(color.alpha)
+			return stringify(values, type || color.space)
+		}
+	}
+
 	if (type === 'hex') {
 		var res = values.slice(0,3).map(function (value) {
 			return (value < 16 ? '0' : '') + value.toString(16);
