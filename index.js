@@ -2,6 +2,8 @@
  * @module  color-stringify
  */
 
+'use strict'
+
 module.exports = stringify;
 
 
