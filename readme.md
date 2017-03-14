@@ -14,7 +14,7 @@ stringify([120,100,100,.4], 'hsl'); //hsla(120, 100%, 100%, .4)
 
 ### `stringify(<values>, <type>?)`
 
-`<values>` is an array.
+`<values>` is an array or an object from [`css-parse`](https://npmjs.com/color-parse)
 
 `<type>` is an optional string:
 

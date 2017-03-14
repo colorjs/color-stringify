@@ -1,5 +1,6 @@
 var stringify = require('./');
 var assert = require('chai').assert;
+var parse = require('color-parse')
 
 describe('color-stringify', function () {
 	it('color-string tests', function () {
@@ -39,5 +40,9 @@ describe('color-stringify', function () {
 		//percent string
 		assert.equal(stringify([10, 30, 25], 'percent'), "rgb(4%, 12%, 10%)");
 		assert.equal(stringify([10, 30, 25, 0.3], 'percent'), "rgba(4%, 12%, 10%, 0.3)");
+
+		assert.equal(stringify(parse('rgb(180, 15, 0)')), 'rgb(180, 15, 0)')
+		assert.equal(stringify(parse('rgba(120, 0, 177, 0.5)')), 'rgba(120, 0, 177, 0.5)')
+		assert.equal(stringify(parse('hsla(170, 100%, 30%, 0.8)')), 'hsla(170, 100%, 30%, 0.8)')
 	});
 });
