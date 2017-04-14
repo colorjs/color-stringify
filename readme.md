@@ -1,5 +1,7 @@
 # color-stringify [![Build Status](https://travis-ci.org/dfcreative/color-stringify.svg?branch=master)](https://travis-ci.org/dfcreative/color-stringify) [![Code Climate](https://codeclimate.com/github/dfcreative/color-stringify/badges/gpa.svg)](https://codeclimate.com/github/dfcreative/color-stringify)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/colorjs/color-stringify.svg)](https://greenkeeper.io/)
+
 Stringify passed values into a color string.
 
 `$ npm install color-stringify`
