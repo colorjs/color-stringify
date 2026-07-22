@@ -2,13 +2,9 @@
  * @module  color-stringify
  */
 
-'use strict'
+import names from 'color-name';
 
-module.exports = stringify;
-
-
-var names = require('color-name');
-
+export default stringify;
 
 /** Inverted color names */
 var nameValues = {};
@@ -38,6 +34,7 @@ function stringify (values, type) {
 
 	if (type === 'hex') {
 		var res = values.slice(0,3).map(function (value) {
+			value = Math.round(value);
 			return (value < 16 ? '0' : '') + value.toString(16);
 		}).join('');
 
